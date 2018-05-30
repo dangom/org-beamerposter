@@ -1,0 +1,88 @@
+# -*- mode: org; -*
+
+* COMMENT Beamer Poster Setup
+
+The beamer poster setup file encapsulates most boilerplate required to get a nice Org -> Poster export.
+It includes not only the necessary LaTeX headers and Org Mode options, but also a set of useful macros to help defining things such as authors and affiliations.
+
+** Beamer Fundamental Concepts
+
+ Before jumping to Org functionality, however, users should be aware of Beamer's most important concepts: blocks and columns:
+
+*** Blocks
+ #+BEGIN_QUOTE
+ Beamer has the concept of block, a set of text that is logically together but apart from the rest of the text that may be in a slide (in our case, the poster is a slide). There are many types of blocks.
+ #+END_QUOTE
+
+ The concept of blocks is important because it allows us to change the display of, e.g., figures, math and references.
+
+*** Columns
+
+ #+BEGIN_QUOTE
+ In a Beamer frame, you might need to present 2 or more groups of content (which may as well be blocks) beside each other. The columns environment of Beamer can be used to achieve this by subdividing the frame into columns.The columns also have widths. By default, these widths are the proportion of the page width to use so I have specified 40% for the left column and 60% for the right one. 
+ #+END_QUOTE
+
+
+** Using Org Mode with Beamer
+
+To tell Org Mode that an org file consists of source code for a beamer presentation (org poster), we have to set a startup command somewhere (usually at the beginning) of our file:
+
+#+BEGIN_SRC org
+#+STARTUP: beamer
+#+END_SRC
+
+Press =C-c C-c= on top of the STARTUP line to activate beamer Org mode the first time you write the line down. This will have the effect of changing a couple of keybindings, e.g., =C-c C-b=, which usually runs the command =org-backward-heading-same-level=, will run =org-beamer-select-environment=. 
+
+Needless to say, Org Mode offers multiple features to aid the construction of beamer presentations. These features include not only Beamer specific keybindings but also special column views to display the structure and elements of the presentation (or poster) without getting lost in details, and a specific latex export command for beamer presentations.
+Besides the full documentation [[https://orgmode.org/manual/Beamer-export.html#Beamer-export][here]], a short documentation can be found [[https://orgmode.org/worg/exporters/beamer/tutorial.html][here]]. Read on for an even shorter overview of the fundamentals.
+
+** Beamer specific markup for Org Mode
+
+Org mode will understand that a heading is of a given *block* type by reading the ~BEAMER_env~ property of a heading. Instead of manually typing the environment type, simply press =C-c C-b= to open a menu with further shortcuts.
+
+Here's a list of some of the available environments:
+
+#+BEGIN_SRC emacs-lisp :eval never
+(mapcar 'car org-beamer-environments-default)
+#+END_SRC
+
+#+RESULTS:
+| block | alertblock | verse | quotation | quote | structureenv | theorem | definition | example | exampleblock | proof | beamercolorbox |
+
+Setting the environment block with =org-beamer-select-environment= will not only add or update the correct the heading's ~BEAMER_env~ property, but also add a tag named ~B_environment~ that is helpful for the overview display (described further down). If a block environment accepts environment specific arguments, they can be defined manually by setting the property ~BEAMER_envargs~. 
+
+The same interface introduced for defining blocks also enables the definition of columns. Use the option ~|~ (vertical slash) to define a column, i.e., =C-c C-b |=. Setting the column with =org-beamer-select-environment= will not only add or update the correct the heading's ~BEAMER_col~ property, but also add a tag named ~BMCOL~.
+
+Columns also have widths, which are given as a proportion of the total frame size. For example, a column width of 0.4 means that a given column will ocupy 40% of the frame. 
+
+*Note that Org Mode will not keep track of the sum of your column sizes. If your columns add to a value greater than 1, then the export will probably break.**
+
+*** Specific poster structure
+
+Taken from the documentation [[https://orgmode.org/manual/Sectioning-Frames-and-Blocks-in-Beamer.html][here]]:
+
+#+BEGIN_QUOTE
+Org transforms heading levels into Beamer’s sectioning elements, frames and blocks.
+Org overrides headlines to frames conversion for the current tree of an Org file if it encounters the BEAMER_ENV property set to frame or fullframe. In Beamer terminology, a fullframe is a frame without its title.
+#+END_QUOTE
+
+Because a poster should only have a single frame, we define the poster as a single top level heading with property ~BEAMER_env~ set to ~fullframe~. We then define the number of columns we want to have as 2nd level headings. Finally, each row block is defined as a 3rd level heading. Deeper levels can be used to structure each row element, as in, e.g., dividing subcolumns or subrows for text and figure.
+
+** Column view for block customisation
+
+Org Mode's column view is not a beamer specific feature, but it can be tuned for beamer with the following line of code:
+
+#+BEGIN_SRC org
+#+COLUMNS: %40ITEM %10BEAMER_env(Env) %9BEAMER_envargs(Env Args) %4BEAMER_col(Col) %10BEAMER_extra(Extra)
+#+END_SRC
+
+ This incantation defines the format for viewing org property information in [[https://orgmode.org/worg/org-tutorials/org-column-view-tutorial.html][column mode]]. This mode allows you to easily adjust the values of the properties for any headline in your document. To see column view press =C-c C-x C-c=.
+To quit, place the cursor on top of any heading and press =q=.
+
+* LaTeX headers :noexport:
+
+#+latex_header: \usepackage[orientation=landscape,size=a1]{beamerposter}
+
+
+* Org Mode Options :noexport:
+
