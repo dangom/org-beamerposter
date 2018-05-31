@@ -1,0 +1,103 @@
+#+TITLE: This is a Poster Template with a Large Name
+#+STARTUP: beamer
+#+LATEX_CLASS: landscape_poster_a1
+# #+latex_header: \usepackage[orientation=landscape,size=a1,scale=1.4,debug,t]{beamerposter}
+#+latex_header: \usepackage{./beamerthemedonders}
+# #+latex_header:\setbeamercolor{block title}{use=structure,fg=white,bg=red!50!brown}
+#+latex_header: \useinnertheme{rectangles}
+#+latex_header: \setbeamerfont{frametitle}{size={\fontsize{65}{40}}}
+# #+latex_header: \includegraphics[width=3cm,height=\paperheight]{./Logos/VertDondersColorBar.jpg}
+#+OPTIONS: email:nil toc:nil num:nil author:nil date:t tex:t title:nil
+#+STARTUP: align fold
+
+# ----------------------------------------------------------------------
+** Latex macros                                                      :ignore:
+# ----------------------------------------------------------------------
+#+LATEX_HEADER: \newcommand{\auth}{Daniel P. Gomez, PhD Candidate}
+#+LATEX_HEADER: \newcommand{\authemail}{d.gomez@donders.ru.nl}
+#+LATEX_HEADER: \newcommand{\authtwitter}{@philipphoman}
+#+LATEX_HEADER: \newcommand{\authgithub}{github.com/philipphoman}
+# ----------------------------------------------------------------------
+** Authors and affiliations                                   :ignore:
+# ----------------------------------------------------------------------
+#+LATEX_HEADER: \author{
+#+LATEX_HEADER: Daniel Gomez$^{1}$ 
+#+LATEX_HEADER: \\
+#+LATEX_HEADER: \vspace{5mm}
+#+LATEX_HEADER: \normalsize{$^{1}$Donders Centre for Cognitive Neuroimaging,} 
+#+LATEX_HEADER: \normalsize{Radboud University Nijmegen,}
+#+LATEX_HEADER: \normalsize{Nijmegen, The Netherlands}
+#+LATEX_HEADER: }
+
+* ISMRM Poster :B_fullframe:
+  :PROPERTIES:
+  :BEAMER_env: fullframe
+  :END:
+
+** Column 1                                                           :BMCOL:
+   :PROPERTIES:
+   :BEAMER_col: 0.3
+   :END:
+
+*** Introduction :B_block:
+    :PROPERTIES:
+    :BEAMER_env: block
+    :END:
+Fusce sagittis, libero non molestie mollis, magna orci ultrices dolor, at vulputate neque nulla lacinia eros. Aliquam erat volutpat.  Nunc eleifend leo vitae magna.  In id erat non orci commodo lobortis.  Proin neque massa, cursus ut, gravida ut, lobortis eget, lacus.  Sed diam.  Praesent fermentum tempor tellus.  Nullam tempus.  Mauris ac felis vel velit tristique imperdiet.  Donec at pede.  Etiam vel neque nec dui dignissim bibendum.  Vivamus id enim.  Phasellus neque orci, porta a, aliquet quis, semper a, massa.  Phasellus purus.  Pellentesque tristique imperdiet tortor.  Nam euismod tellus id erat.
+
+ 
+*** Design :B_block:
+    :PROPERTIES:
+    :BEAMER_env: block
+    :END:
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit.  Aliquam erat volutpat.  Nunc eleifend leo vitae magna.  In id erat non orci commodo lobortis.  Proin neque massa, cursus ut, gravida ut, lobortis eget, lacus.  Sed diam.  Praesent fermentum tempor tellus.  Nullam tempus.  Mauris ac felis vel velit tristique imperdiet.  Donec at pede.  Etiam vel neque nec dui dignissim bibendum.  Vivamus id enim.  Phasellus neque orci, porta a, aliquet quis, semper a, massa.  Phasellus purus.  Pellentesque tristique imperdiet tortor.  Nam euismod tellus id erat.
+
+
+
+** Column 2                                                           :BMCOL:
+   :PROPERTIES:
+   :BEAMER_col: 0.3
+   :END:
+
+*** Analysis :B_block:
+    :PROPERTIES:
+    :BEAMER_env: block
+    :END:
+Nam euismod tellus id erat.  Aliquam erat volutpat.  Nunc eleifend leo vitae magna.  In id erat non orci commodo lobortis.  Proin neque massa, cursus ut, gravida ut, lobortis eget, lacus.  Sed diam.  Praesent fermentum tempor tellus.  Nullam tempus.  Mauris ac felis vel velit tristique imperdiet.  Donec at pede.  Etiam vel neque nec dui dignissim bibendum.  Vivamus id enim.  Phasellus neque orci, porta a, aliquet quis, semper a, massa.  Phasellus purus.  Pellentesque tristique imperdiet tortor.  Nam euismod tellus id erat.
+
+
+*** Results :B_block:
+    :PROPERTIES:
+    :BEAMER_env: block
+    :END:
+Suspendisse potenti. Pellentesque dapibus suscipit ligula.  Donec posuere augue in quam.  Etiam vel tortor sodales tellus ultricies commodo.  Suspendisse potenti.  Aenean in sem ac leo mollis blandit.  Donec neque quam, dignissim in, mollis nec, sagittis eu, wisi.  Phasellus lacus.  Etiam laoreet quam sed arcu.  Phasellus at dui in ligula mollis ultricies.  Integer placerat tristique nisl.  Praesent augue.  Fusce commodo.  Vestibulum convallis, lorem a tempus semper, dui dui euismod elit, vitae placerat urna tortor vitae lacus.  Nullam libero mauris, consequat quis, varius et, dictum id, arcu.  Mauris mollis tincidunt felis.  Aliquam feugiat tellus ut neque.  Nulla facilisis, risus a rhoncus fermentum, tellus tellus lacinia purus, et dictum nunc justo sit amet elit.
+
+  
+
+** Column 3                                                           :BMCOL:
+   :PROPERTIES:
+   :BEAMER_col: 0.3
+   :END:
+
+*** Conclusions :B_block:
+    :PROPERTIES:
+    :BEAMER_env: block
+    :END:
+Etiam vel neque nec dui dignissim bibendum.  Lorem ipsum dolor sit amet, consectetuer adipiscing elit.  Donec hendrerit tempor tellus.  Donec pretium posuere tellus.  Proin quam nisl, tincidunt et, mattis eget, convallis nec, purus.  Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.  Nulla posuere.  Donec vitae dolor.  Nullam tristique diam non turpis.  Cras placerat accumsan nulla.  Nullam rutrum.  Nam vestibulum accumsan nisl.
+
+
+*** References :B_block:
+    :PROPERTIES:
+    :BEAMER_env: block
+    :END:
+Mauris ac felis vel velit tristique imperdiet.  Aliquam erat volutpat.  Nunc eleifend leo vitae magna.  In id erat non orci commodo lobortis.  Proin neque massa, cursus ut, gravida ut, lobortis eget, lacus.  Sed diam.  Praesent fermentum tempor tellus.  Nullam tempus.  Mauris ac felis vel velit tristique imperdiet.  Donec at pede.  Etiam vel neque nec dui dignissim bibendum.  Vivamus id enim.  Phasellus neque orci, porta a, aliquet quis, semper a, massa.  Phasellus purus.  Pellentesque tristique imperdiet tortor.  Nam euismod tellus id erat.
+
+
+
+
+* Local Settings :noexport:
+
+# Local Variables:
+# org-export-allow-bind-keywords: t
+# org-latex-pdf-process: ("latexmk -pdflatex='xelatex -interaction nonstopmode' -pdf -bibtex -f %f")
+# End:

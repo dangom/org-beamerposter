@@ -4,6 +4,27 @@
 
 The beamer poster setup file encapsulates most boilerplate required to get a nice Org -> Poster export.
 It includes not only the necessary LaTeX headers and Org Mode options, but also a set of useful macros to help defining things such as authors and affiliations.
+To get it working, and to be able to correctly use the template provided, add the following to your init (or evaluate it before export):
+
+#+BEGIN_SRC emacs-lisp
+(add-to-list 'org-latex-classes
+             '("landscape_poster_a1"
+               "\\documentclass[t]{beamer}
+           \\usepackage[orientation=landscape,size=a1,scale=1.4]{beamerposter}
+           \\usepackage[absolute,overlay]{textpos}
+[NO-DEFAULT-PACKAGES]
+[PACKAGES]
+[EXTRA]"
+     ("\\section{%s}" . "\\section*{%s}")
+     ("\\subsection{%s}" . "\\subsection*{%s}")
+     ("\\subsubsection{%s}" . "\\subsubsection*{%s}")))
+
+#+END_SRC
+
+#+RESULTS:
+| landscape_poster_a1 | \documentclass[t]{beamer} |
+
+The defined class landscape_poster_a1 is meant to be compiled with XeLaTeX because of its better support for fonts. That is the reason why the template locally redefines =org-latex-pdf-process=.
 
 ** Beamer Fundamental Concepts
 

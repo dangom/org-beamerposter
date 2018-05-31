@@ -1,0 +1,226 @@
+%--------------------------------------------------------------------------------
+% This style was created by Philipp Homan
+% (Adaption from Rob J Hyndman and David Vilar)
+% 4/1/18
+%--------------------------------------------------------------------------------
+\ProvidesPackage{beamerthemeph}
+\selectcolormodel{cmyk}
+\mode<presentation>
+%--------------------------------------------------------------------------------
+
+% \usefonttheme{professionalfonts} prevents beamer from overwriting
+% your fonts and is therefore needed to use specified font packages.
+\usefonttheme{professionalfonts}
+
+% use Adobe's Source Pro fonts:
+% Source Serif Pro: https://github.com/adobe-fonts/source-serif-pro
+% Source Sans Pro: https://github.com/adobe-fonts/source-sans-pro
+% Source Code Pro: https://github.com/adobe-fonts/source-code-pro
+% \setmainfont{Source Serif Pro}
+% \setsansfont{Source Sans Pro}
+% \setmonofont{Source Code Pro}
+\usepackage{unicode-math}
+\usepackage[lining]{sourcesanspro}
+% \usepackage{sourceserifpro}
+% \usepackage{sourcecodepro}
+% \usepackage{FiraSans}
+% \setmathfont{TeX Gyre Pagella Math}
+%\usepackage[hidelinks]{hyperref}
+%\urlstyle{same}
+
+
+%--------------------------------------------------------------------------------
+% custom colors
+%--------------------------------------------------------------------------------
+
+%% Donders Colors
+\definecolor{dblack}{HTML}{000000}
+\definecolor{ddarkred}{HTML}{7A0002}
+\definecolor{dmediumred}{HTML}{AE1E15}
+\definecolor{dlightred}{HTML}{FB0007}
+\definecolor{dorange}{HTML}{FC5907}
+\definecolor{ddarkyellow}{HTML}{FEB80A}
+\definecolor{dyellow}{HTML}{FFFF0B}
+\definecolor{dwaterblue}{HTML}{1184B0}
+\definecolor{dgreen}{HTML}{4F9236}
+\definecolor{white}{HTML}{FFFFFF}
+
+%--------------------------------------------------------------------------------
+% headline colors and fonts
+%--------------------------------------------------------------------------------
+\setbeamercolor{headline}{fg=white,bg=white}
+\setbeamercolor{title in headline}{fg=white,bg=white}
+\setbeamercolor{logo}{bg=white}
+\setbeamercolor{title in headline}{fg=dblack,bg=white}
+\setbeamercolor{author in headline}{fg=dlightred, bg=white}
+\setbeamercolor{institute in headline}{fg=dlightred}
+\setbeamercolor{logo in headline}{fg=dblack,bg=white}
+\setbeamercolor{separation line}{bg=white}
+
+%--------------------------------------------------------------------------------
+% footline colors and fonts
+%--------------------------------------------------------------------------------
+\setbeamercolor{footline}{fg=white,bg=white}
+\setbeamerfont{footline}{size=\normalsize}
+%\setbeamerfont{footline}{size=\small}
+
+%--------------------------------------------------------------------------------
+% body colors and fonts
+%--------------------------------------------------------------------------------
+\setbeamercolor*{normal text}{fg=dblack,bg=white}
+
+%--------------------------------------------------------------------------------
+% block environment
+%--------------------------------------------------------------------------------
+\setbeamercolor*{block body}{bg=white,fg=dblack}
+\setbeamerfont{block body}{size=\large}
+\setbeamercolor*{block title}{fg=white,bg=dlightred}
+\setbeamerfont{block title}{size=\Large,series=\bf}
+
+%--------------------------------------------------------------------------------
+% example environment
+%--------------------------------------------------------------------------------
+\setbeamercolor*{example title}{fg=white,bg=white}
+\setbeamerfont{example title}{size=\large,series=\bf}
+
+%\setbeamerfont{alerted text}{series=\bf}
+\setbeamercolor{alerted text}{fg=dblack}
+
+\setbeamertemplate{itemize items}[circle]
+\setbeamertemplate{navigation symbols}{}  % no navigation on a poster
+
+%--------------------------------------------------------------------------------
+% caption
+%--------------------------------------------------------------------------------
+\setbeamerfont{caption name}{series=\bfseries,size={\small}}
+\setbeamerfont{caption}{size={\small}}
+\setbeamercolor{caption name}{fg=dblack}
+
+%--------------------------------------------------------------------------------
+% block
+%--------------------------------------------------------------------------------
+\setbeamertemplate{block begin}{
+  \vskip.75ex
+  \begin{beamercolorbox}[leftskip=1cm,colsep*=.75ex]{block title}%
+    \usebeamerfont*{block title}\Large\insertblocktitle
+  \end{beamercolorbox}%
+  {\ifbeamercolorempty[bg]{block body}{}{\nointerlineskip\vskip-0.5pt}}%
+  \usebeamerfont{block body}%
+  \begin{beamercolorbox}[colsep*=.75ex,sep=.75ex,vmode]{block body}%
+    \ifbeamercolorempty[bg]{block body}{\vskip-.25ex}{\vskip-.75ex}\vbox{}%
+  }
+  \setbeamertemplate{block end}{
+  \end{beamercolorbox}
+}
+%--------------------------------------------------------------------------------
+
+%--------------------------------------------------------------------------------
+% headline
+% --------------------------------------------------------------------------------
+
+\beamertemplatenavigationsymbolsempty
+\setbeamertemplate{sidebar canvas left}{
+    \includegraphics[width=3cm,height=\paperheight]{./Logos/VertDondersColorBar.jpg}
+}
+\setbeamersize{sidebar width left=3cm}{}
+
+\setbeamertemplate{headline}{
+  \leavevmode
+  \begin{columns}[t,onlytextwidth]
+    \includegraphics[width=3cm,height=9cm]{./Logos/VertDondersColorBar.jpg}
+	\column{.7\textwidth}
+	  \begin{beamercolorbox}[wd=\columnwidth, leftskip=2cm, ht=7.55cm]{headline}
+%  	\vskip1.5cm
+%		\centering
+     \vskip7.6ex
+    \usebeamercolor{title in
+      headline}{\color{fg}\textbf{\Huge{\inserttitle}}\\[1ex]}
+         \vskip2.6ex
+    \usebeamercolor{author in headline}{\color{fg}\large{\insertauthor}\\[1ex]}
+     \vskip2.4ex
+	  \end{beamercolorbox}
+	\column{.3\textwidth}
+	   \begin{beamercolorbox}[wd=\columnwidth]{logo}
+    % \centering
+		% \vskip2.10cm
+       \raisebox{2.3cm}[0pt][0pt]{%
+\makebox[\textwidth][c]{\includegraphics[width=0.8\linewidth]{./Logos/DONDERS_LOGO_RGB_large.png}}
+}
+		
+		% \vskip2.10cm
+	   \end{beamercolorbox}
+  \end{columns}
+  %\begin{beamercolorbox}[wd=\paperwidth]{lower separation line head}
+  %  \rule{0pt}{2pt}
+  %\end{beamercolorbox}
+  %\begin{beamercolorbox}[wd=\paperwidth]{lower separation line head}
+  %  \rule{0pt}{2pt}
+  %\end{beamercolorbox}
+
+
+}
+%--------------------------------------------------------------------------------
+
+
+% %--------------------------------------------------------------------------------
+% % Footer
+% %--------------------------------------------------------------------------------
+\setbeamertemplate{footline}{
+  %\begin{beamercolorbox}[wd=\paperwidth]{upper separation line foot}
+  %  \rule{0pt}{2pt}
+  %\end{beamercolorbox}
+
+  \begin{columns}[t,onlytextwidth]
+	\column{.75\textwidth}
+	   %\begin{beamercolorbox}[leftskip=-0.5cm,wd=\columnwidth, ht=3cm]{logo}
+	   \begin{beamercolorbox}[wd=\columnwidth, ht=3cm]{logo}
+       \includegraphics[width=3cm,height=4cm]{./Logos/VertDondersColorBar.jpg}
+    %\vskip1.6ex
+     % \vspace{0.3ex}
+	   \end{beamercolorbox}
+	\column{.25\textwidth}
+	  \begin{beamercolorbox}[leftskip=1cm,wd=\columnwidth,
+      ht=3cm]{headline}
+       \raisebox{1.5cm}[0pt][0pt]{%
+\makebox[\textwidth][c]{      \includegraphics[scale=0.55]{./Logos/Radboud.png}}
+}
+
+    %\hfill \raisebox{-0.4cm}{\insertfooter}
+    %\vskip1.5ex
+    %\insertfooter
+    %\includegraphics[width=0.65\textwidth,left]{twittergithub.pdf}
+    %\vskip1.5ex
+	  %\begin{beamercolorbox}[wd=\columnwidth]{logo}
+
+    %\begin{tabular}{rllrll}
+    %  \textbf{Philipp Homan, MD, PhD} & & & & & \\
+    %  phoman1@northwell.edu & & 
+    %  \includegraphics[width=0.5in]{twitter.pdf} & @philipphoman &  
+    %  \includegraphics[width=0.5in]{github.pdf} & github.com/philipphoman \\
+    % \end{tabular}
+    % \vspace{-1cm}
+
+    % \begin{tabular}{rlrlrl}
+    %   %\textbf{Philipp Homan, MD, PhD} & & & & & \\
+    %   \textbf{\auth} & & & & & \\
+    %   \authemail & & 
+    %   % \includegraphics[width=0.5in]{twitter.pdf} & \authtwitter &  
+    %   % \includegraphics[width=0.5in]{github.pdf} & \authgithub 
+    %  \end{tabular}
+    %  \vspace{0.3ex}
+
+	  \end{beamercolorbox}
+  \end{columns}
+  %\begin{beamercolorbox}[wd=\paperwidth]{lower separation line head}
+  %  \rule{0pt}{2pt}
+  %\end{beamercolorbox}
+  %\begin{beamercolorbox}[wd=\paperwidth]{lower separation line head}
+  %  \rule{0pt}{2pt}
+  %\end{beamercolorbox}
+
+
+}
+%--------------------------------------------------------------------------------
+\mode<all>
+\setbeamertemplate{caption}[numbered]
+\def\footer#1{\def\insertfooter{#1}}
