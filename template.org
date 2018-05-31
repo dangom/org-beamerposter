@@ -63,7 +63,7 @@ Suspendisse potenti. Pellentesque dapibus suscipit ligula.  Donec posuere augue 
 
 #+NAME: Radboud Logo
 #+CAPTION: This is a figure.
-[[/home/mrphys/dangom/Projects/org-beamerposter/Logos/Radboud.png]]
+[[./Logos/Radboud.png]]
 
 Etiam laoreet quam sed arcu.  Phasellus at dui in ligula mollis ultricies.  Integer placerat tristique nisl.  Praesent augue.  Fusce commodo.  Vestibulum convallis, lorem a tempus semper, dui dui euismod elit, vitae placerat urna tortor vitae lacus.  Nullam libero mauris, consequat quis, varius et, dictum id, arcu.  Mauris mollis tincidunt felis.  Aliquam feugiat tellus ut neque.
 
