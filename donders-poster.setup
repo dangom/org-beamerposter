@@ -19,10 +19,12 @@ To get it working, and to be able to correctly use the template provided, add th
      ("\\subsection{%s}" . "\\subsection*{%s}")
      ("\\subsubsection{%s}" . "\\subsubsection*{%s}")))
 
+(add-to-list 'org-beamer-environments-extra
+             '("references" "r" "\\begin{references}%a{%h}" "\\end{references}"))
 #+END_SRC
 
 #+RESULTS:
-| landscape_poster_a1 | \documentclass[t]{beamer} |
+| references | r | \begin{references}%a{%h} | \end{references} |
 
 The defined class landscape_poster_a1 is meant to be compiled with XeLaTeX because of its better support for fonts. That is the reason why the template locally redefines =org-latex-pdf-process=.
 
@@ -102,8 +104,23 @@ To quit, place the cursor on top of any heading and press =q=.
 
 * LaTeX headers :noexport:
 
-#+latex_header: \usepackage[orientation=landscape,size=a1]{beamerposter}
-
+#+latex_header: \usepackage[backend=biber, maxbibnames=2, maxcitenames=2, sortcites=true, style=authoryear]{biblatex}
+#+latex_header: \AtEveryBibitem{%
+#+latex_header:  \clearfield{issn} % Remove issn
+#+latex_header:  \clearfield{doi} % Remove doi
+#+latex_header: \ifentrytype{online}{}{% Remove url except for @online
+#+latex_header:   \clearfield{url}
+#+latex_header: }
+#+latex_header: }
+#+latex_header: \setbeamerfont{frametitle}{size={\fontsize{65}{40}}}
+# #+LATEX_HEADER: \usepackage[export]{adjustbox}
+# #+LATEX_HEADER: \usepackage{graphicx,caption}
+# #+LATEX_HEADER: \usepackage{eurosym}
+# #+LATEX_HEADER: \usepackage{listings}
+# #+LATEX_HEADER: \usepackage{textcomp}
+# #+LATEX_HEADER: \usepackage{bibentry}
 
 * Org Mode Options :noexport:
+
+#+OPTIONS: email:nil toc:nil num:nil author:nil date:t tex:t title:nil
 

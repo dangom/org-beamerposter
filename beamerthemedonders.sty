@@ -3,7 +3,7 @@
 % (Adaption from Rob J Hyndman and David Vilar)
 % 4/1/18
 %--------------------------------------------------------------------------------
-\ProvidesPackage{beamerthemeph}
+\ProvidesPackage{beamerthemedonders}
 \selectcolormodel{cmyk}
 \mode<presentation>
 %--------------------------------------------------------------------------------
@@ -19,7 +19,9 @@
 % \setmainfont{Source Serif Pro}
 % \setsansfont{Source Sans Pro}
 % \setmonofont{Source Code Pro}
-\usepackage{unicode-math}
+% \usepackage{fontspec}
+% \usepackage{microtype}
+% \usepackage{unicode-math}
 \usepackage[lining]{sourcesanspro}
 % \usepackage{sourceserifpro}
 % \usepackage{sourcecodepro}
@@ -73,9 +75,16 @@
 % block environment
 %--------------------------------------------------------------------------------
 \setbeamercolor*{block body}{bg=white,fg=dblack}
-\setbeamerfont{block body}{size=\large}
+\setbeamerfont{block body}{size=\normalsize}
 \setbeamercolor*{block title}{fg=white,bg=dlightred}
 \setbeamerfont{block title}{size=\Large,series=\bf}
+
+% %--------------------------------------------------------------------------------
+% % references environment
+% %--------------------------------------------------------------------------------
+% \newenvironment<>{references}[1]{%
+%   \setbeamerfont{block body}{size=\small}%
+%   \begin{block}#2{#1}}{\end{block}}
 
 %--------------------------------------------------------------------------------
 % example environment
@@ -118,7 +127,7 @@
 % headline
 % --------------------------------------------------------------------------------
 
-\beamertemplatenavigationsymbolsempty
+% \beamertemplatenavigationsymbolsempty
 \setbeamertemplate{sidebar canvas left}{
     \includegraphics[width=3cm,height=\paperheight]{./Logos/VertDondersColorBar.jpg}
 }
@@ -182,7 +191,7 @@
 	  \begin{beamercolorbox}[leftskip=1cm,wd=\columnwidth,
       ht=3cm]{headline}
        \raisebox{1.5cm}[0pt][0pt]{%
-\makebox[\textwidth][c]{      \includegraphics[scale=0.55]{./Logos/Radboud.png}}
+\makebox[\textwidth][c]{      \includegraphics[scale=0.5]{./Logos/Radboud.png}}
 }
 
     %\hfill \raisebox{-0.4cm}{\insertfooter}
