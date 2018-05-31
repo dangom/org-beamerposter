@@ -1,12 +1,11 @@
 #+TITLE: This is a Poster Template with a Large Name
 #+STARTUP: beamer
 #+STARTUP: align fold
+#+COLUMNS: %40ITEM %10BEAMER_env(Env) %9BEAMER_envargs(Env Args) %4BEAMER_col(Col) %10BEAMER_extra(Extra)
 #+LATEX_CLASS: landscape_poster_a1
-#+LATEX_HEADER: \usepackage{./beamerthemedonders}
-#+BEAMER_INNER_THEME: rectangles
 #+SETUPFILE: ./donders-poster.setup
-#+LATEX_HEADER:\addbibresource{/home/mrphys/dangom/Papers/bibtex/Publications.bib}
-#+latex_header: \renewcommand*{\bibfont}{\small}
+#+LATEX_HEADER:\addbibresource{~/Papers/bibtex/Publications.bib}
+
 # ----------------------------------------------------------------------
 ** Authors and affiliations                                   :ignore:
 # ----------------------------------------------------------------------

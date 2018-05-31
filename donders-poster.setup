@@ -3,7 +3,7 @@
 * COMMENT Beamer Poster Setup
 
 The beamer poster setup file encapsulates most boilerplate required to get a nice Org -> Poster export.
-It includes not only the necessary LaTeX headers and Org Mode options, but also a set of useful macros to help defining things such as authors and affiliations.
+It includes not only the necessary LaTeX headers and Org Mode options, but eventually will also include a set of useful macros to help defining things such as authors and affiliations.
 To get it working, and to be able to correctly use the template provided, add the following to your init (or evaluate it before export):
 
 #+BEGIN_SRC emacs-lisp
@@ -18,15 +18,9 @@ To get it working, and to be able to correctly use the template provided, add th
      ("\\section{%s}" . "\\section*{%s}")
      ("\\subsection{%s}" . "\\subsection*{%s}")
      ("\\subsubsection{%s}" . "\\subsubsection*{%s}")))
-
-(add-to-list 'org-beamer-environments-extra
-             '("references" "r" "\\begin{references}%a{%h}" "\\end{references}"))
 #+END_SRC
 
-#+RESULTS:
-| references | r | \begin{references}%a{%h} | \end{references} |
-
-The defined class landscape_poster_a1 is meant to be compiled with XeLaTeX because of its better support for fonts. That is the reason why the template locally redefines =org-latex-pdf-process=.
+The defined class landscape_poster_a1 is meant can be compiled with both PdfLaTeX or XeLaTeX. The template locally redefines =org-latex-pdf-process= to ensure that the compilation works as expected.
 
 ** Beamer Fundamental Concepts
 
@@ -113,6 +107,9 @@ To quit, place the cursor on top of any heading and press =q=.
 #+latex_header: }
 #+latex_header: }
 #+latex_header: \setbeamerfont{frametitle}{size={\fontsize{65}{40}}}
+#+latex_header: \renewcommand*{\bibfont}{\small}
+# Ideally the beamerthemedonders would be properly installed in the system, but the workaround is fine for now.
+#+LATEX_HEADER: \usepackage{./beamerthemedonders}
 # #+LATEX_HEADER: \usepackage[export]{adjustbox}
 # #+LATEX_HEADER: \usepackage{graphicx,caption}
 # #+LATEX_HEADER: \usepackage{eurosym}
@@ -123,4 +120,4 @@ To quit, place the cursor on top of any heading and press =q=.
 * Org Mode Options :noexport:
 
 #+OPTIONS: email:nil toc:nil num:nil author:nil date:t tex:t title:nil
-
+#+BEAMER_INNER_THEME: rectangles
