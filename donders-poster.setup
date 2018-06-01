@@ -1,4 +1,4 @@
-# -*- mode: org; -*
+# -*- mode: org; -*-
 
 * COMMENT Beamer Poster Setup
 
@@ -19,6 +19,9 @@ To get it working, and to be able to correctly use the template provided, add th
      ("\\subsection{%s}" . "\\subsection*{%s}")
      ("\\subsubsection{%s}" . "\\subsubsection*{%s}")))
 #+END_SRC
+
+#+RESULTS:
+| landscape_poster_a1 | \documentclass[t]{beamer} |
 
 The defined class landscape_poster_a1 is meant can be compiled with both PdfLaTeX or XeLaTeX. The template locally redefines =org-latex-pdf-process= to ensure that the compilation works as expected.
 
