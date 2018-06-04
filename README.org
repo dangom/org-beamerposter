@@ -20,7 +20,7 @@ To get it working, and to be able to correctly use the template provided, add th
      ("\\subsubsection{%s}" . "\\subsubsection*{%s}")))
 #+END_SRC
 
-The defined class landscape_poster_a1 is meant can be compiled with both PdfLaTeX or XeLaTeX. The template locally redefines =org-latex-pdf-process= to ensure that the compilation works as expected.
+The defined class landscape_poster_a1 is meant to be compatible with both PdfLaTeX or XeLaTeX. The template locally redefines =org-latex-pdf-process= to ensure that the compilation works as expected.
 
 ** Beamer Fundamental Concepts
 

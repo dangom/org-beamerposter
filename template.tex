@@ -1,0 +1,92 @@
+% Created 2018-06-01 Fri 11:50
+% Intended LaTeX compiler: pdflatex
+\documentclass[t]{beamer}
+\usepackage[orientation=landscape,size=a1,scale=1.4]{beamerposter}
+\usepackage[absolute,overlay]{textpos}
+\usepackage[backend=biber, maxbibnames=2, maxcitenames=2, sortcites=true, style=authoryear]{biblatex}
+\AtEveryBibitem{%
+  \clearfield{issn} % Remove issn
+  \clearfield{doi} % Remove doi
+  \ifentrytype{online}{}{% Remove url except for @online
+    \clearfield{url}
+  }
+}
+\setbeamerfont{frametitle}{size={\fontsize{65}{40}}}
+\renewcommand*{\bibfont}{\small}
+
+%% Could've been \usetheme{donders}, but this way doesn't require any installation.
+\usepackage{./beamerthemedonders}
+
+\addbibresource{~/Papers/bibtex/Publications.bib}
+\author{
+  Daniel Gomez$^{1}$
+  \\
+  \vspace{5mm}
+  \normalsize{$^{1}$Donders Centre for Cognitive Neuroimaging,}
+  \normalsize{Radboud University Nijmegen,}
+  \normalsize{Nijmegen, The Netherlands}
+}
+\usetheme{default}
+\useinnertheme{rectangles}
+\date{\today}
+\title{This is a Poster Template with a Large Name}
+\hypersetup{
+  pdfauthor={Daniel P Gomez},
+  pdftitle={This is a Poster Template with a Large Name},
+  pdfkeywords={},
+  pdfsubject={},
+  pdfcreator={Emacs 26.1 (Org mode 9.1.13)},
+  pdflang={English}}
+\begin{document}
+
+
+\begin{frame}[label={sec:orgafca15d}]{}
+  \begin{columns}
+    \begin{column}{0.3\columnwidth}
+      \begin{block}{Introduction}
+        Fusce sagittis, libero non molestie mollis, magna orci ultrices dolor, at vulputate neque nulla lacinia eros. Aliquam erat volutpat.  Nunc eleifend leo vitae magna. \parencite{Shrout1979}  In id erat non orci commodo lobortis.  Proin neque massa, cursus ut, gravida ut, lobortis eget, lacus.  Sed diam.  \alert{Praesent fermentum tempor tellus.}  Nullam tempus.  Mauris ac felis vel velit tristique imperdiet.  Donec at pede.  Etiam vel neque nec dui dignissim bibendum.  Vivamus id enim.  Phasellus neque orci, porta a, aliquet quis, semper a, massa.  \emph{Phasellus purus.}  Pellentesque tristique imperdiet tortor.  Nam euismod tellus id erat.
+      \end{block}
+
+
+      \begin{block}{Design}
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit.  Aliquam erat volutpat.  Nunc eleifend leo vitae magna.  In id erat non orci commodo lobortis.  Proin neque massa, cursus ut, gravida ut, lobortis eget, lacus.  Sed diam.  Praesent fermentum tempor tellus.  Nullam tempus.  Mauris ac felis vel velit tristique imperdiet.  Donec at pede.  Etiam vel neque nec dui dignissim bibendum.  Vivamus id enim.  Phasellus neque orci, porta a, aliquet quis, semper a, massa.  Phasellus purus.  Pellentesque tristique imperdiet tortor.  Nam euismod tellus id erat. \parencite{Gratton2018}
+      \end{block}
+    \end{column}
+
+
+
+    \begin{column}{0.3\columnwidth}
+      \begin{block}{Analysis}
+        Nam euismod tellus id erat.  Aliquam erat volutpat.  Nunc eleifend leo vitae magna.  In id erat non orci commodo lobortis.  Proin neque massa, cursus ut, gravida ut, lobortis eget, lacus.  Sed diam.  Praesent fermentum tempor tellus.  Nullam tempus.  Mauris ac felis vel velit tristique imperdiet.  Donec at pede.  Etiam vel neque nec dui dignissim bibendum.  Vivamus id enim.  Phasellus neque orci, porta a, aliquet quis, semper a, massa.  Phasellus purus.  Pellentesque tristique imperdiet tortor.  Nam euismod tellus id erat.
+      \end{block}
+
+
+      \begin{block}{Results}
+        Suspendisse potenti. Pellentesque dapibus suscipit ligula.  Donec posuere augue in quam.  Etiam vel tortor sodales tellus ultricies commodo.  Suspendisse potenti.  Aenean in sem ac leo mollis blandit.  Donec neque quam, dignissim in, mollis nec, sagittis eu, wisi.  Phasellus lacus.
+
+        \begin{figure}[htbp]
+          \centering
+          \includegraphics[width=.9\linewidth]{./Logos/Radboud.png}
+          \caption{\label{Radboud Logo}
+            This is a figure.}
+        \end{figure}
+
+        Etiam laoreet quam sed arcu.  Phasellus at dui in ligula mollis ultricies.  Integer placerat tristique nisl.  Praesent augue.  Fusce commodo.  Vestibulum convallis, lorem a tempus semper, dui dui euismod elit, vitae placerat urna tortor vitae lacus.  Nullam libero mauris, consequat quis, varius et, dictum id, arcu.  Mauris mollis tincidunt felis.  Aliquam feugiat tellus ut neque.
+      \end{block}
+    \end{column}
+
+
+
+    \begin{column}{0.3\columnwidth}
+      \begin{block}{Conclusions}
+        Etiam vel neque nec dui dignissim bibendum.  Lorem ipsum dolor sit amet, consectetuer adipiscing elit.  Donec hendrerit tempor tellus.  Donec pretium posuere tellus.  Proin quam nisl, tincidunt et, mattis eget, convallis nec, purus.  Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.  Nulla posuere.  Donec vitae dolor.  Nullam tristique diam non turpis.  Cras placerat accumsan nulla.  Nullam rutrum.  Nam vestibulum accumsan nisl. QED.
+      \end{block}
+
+
+      \begin{block}{References}
+        \printbibliography
+      \end{block}
+    \end{column}
+  \end{columns}
+\end{frame}
+\end{document}
