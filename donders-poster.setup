@@ -10,7 +10,19 @@ To get it working, and to be able to correctly use the template provided, add th
 (add-to-list 'org-latex-classes
              '("landscape_poster_a1"
                "\\documentclass[t]{beamer}
-           \\usepackage[orientation=landscape,size=a1,scale=1.4]{beamerposter}
+           \\usepackage[orientation=landscape,size=a1,scale=1.4,debug]{beamerposter}
+           \\usepackage[absolute,overlay]{textpos}
+[NO-DEFAULT-PACKAGES]
+[PACKAGES]
+[EXTRA]"
+     ("\\section{%s}" . "\\section*{%s}")
+     ("\\subsection{%s}" . "\\subsection*{%s}")
+     ("\\subsubsection{%s}" . "\\subsubsection*{%s}")))
+
+(add-to-list 'org-latex-classes
+             '("portrait_poster_a0"
+               "\\documentclass[t]{beamer}
+           \\usepackage[orientation=portrait,size=a0,scale=1.4,debug]{beamerposter}
            \\usepackage[absolute,overlay]{textpos}
 [NO-DEFAULT-PACKAGES]
 [PACKAGES]
@@ -21,7 +33,7 @@ To get it working, and to be able to correctly use the template provided, add th
 #+END_SRC
 
 #+RESULTS:
-| landscape_poster_a1 | \documentclass[t]{beamer} |
+| portrait_poster_a0 | \documentclass[t]{beamer} |
 
 The defined class landscape_poster_a1 is meant can be compiled with both PdfLaTeX or XeLaTeX. The template locally redefines =org-latex-pdf-process= to ensure that the compilation works as expected.
 

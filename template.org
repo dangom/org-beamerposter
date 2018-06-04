@@ -2,7 +2,8 @@
 #+STARTUP: beamer
 #+STARTUP: align fold
 #+COLUMNS: %40ITEM %10BEAMER_env(Env) %9BEAMER_envargs(Env Args) %4BEAMER_col(Col) %10BEAMER_extra(Extra)
-#+LATEX_CLASS: landscape_poster_a1
+# #+LATEX_CLASS: landscape_poster_a1
+#+LATEX_CLASS: portrait_poster_a0
 #+SETUPFILE: ./donders-poster.setup
 #+LATEX_HEADER:\addbibresource{~/Papers/bibtex/Publications.bib}
 
