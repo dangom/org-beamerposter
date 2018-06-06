@@ -102,5 +102,5 @@ Etiam vel neque nec dui dignissim bibendum.  Lorem ipsum dolor sit amet, consect
 
 # Local Variables:
 # org-export-allow-bind-keywords: t
-# org-latex-pdf-process: ("latexmk -pdflatex='pdflatex -shell-escape -interaction nonstopmode' -pdf -bibtex -f %f")
+# org-latex-pdf-process: ("latexmk -pdflatex='xelatex -shell-escape -interaction nonstopmode' -pdf -bibtex -f %f")
 # End:
