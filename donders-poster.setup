@@ -113,7 +113,7 @@ To quit, place the cursor on top of any heading and press =q=.
 
 * LaTeX headers :noexport:
 
-#+latex_header: \usepackage[backend=biber, maxbibnames=2, maxcitenames=2, sortcites=true, style=authoryear]{biblatex}
+#+latex_header: \usepackage[backend=biber, maxbibnames=2, maxcitenames=2, sortcites=true, style=numeric]{biblatex}
 #+latex_header: \AtEveryBibitem{%
 #+latex_header:  \clearfield{issn} % Remove issn
 #+latex_header:  \clearfield{doi} % Remove doi
@@ -131,6 +131,10 @@ To quit, place the cursor on top of any heading and press =q=.
 # #+LATEX_HEADER: \usepackage{listings}
 # #+LATEX_HEADER: \usepackage{textcomp}
 # #+LATEX_HEADER: \usepackage{bibentry}
+# useful for XeLaTeX
+#+latex_header: \usepackage{fontspec}
+#+latex_header: \usepackage{polyglossia}
+#+latex_header: \usepackage{microtype}
 
 * Org Mode Options :noexport:
 
