@@ -24,6 +24,8 @@
   :BEAMER_env: fullframe
   :END:
 
+
+
 ** Column 1                                                           :BMCOL:
    :PROPERTIES:
    :BEAMER_col: 0.3
@@ -46,8 +48,6 @@ Fusce sagittis, libero non molestie mollis, magna orci ultrices dolor, at vulput
 - Sed diam.  Praesent fermentum tempor tellus.  Nullam tempus.  Mauris ac felis vel velit tristique imperdiet.  Donec at pede.  Etiam vel neque nec dui dignissim bibendum.
 
 Vivamus id enim.  Phasellus neque orci, porta a, aliquet quis, semper a, massa.  Phasellus purus.  Pellentesque tristique imperdiet tortor.  Nam euismod tellus id erat. parencite:Gratton2018
-
-
 
 ** Column 2                                                           :BMCOL:
    :PROPERTIES:

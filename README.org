@@ -10,7 +10,7 @@ To get it working, and to be able to correctly use the template provided, add th
 (add-to-list 'org-latex-classes
              '("landscape_poster_a1"
                "\\documentclass[t]{beamer}
-           \\usepackage[orientation=landscape,size=a1,scale=1.4]{beamerposter}
+           \\usepackage[orientation=landscape,size=a1,scale=1.25]{beamerposter}
            \\usepackage[absolute,overlay]{textpos}
 [NO-DEFAULT-PACKAGES]
 [PACKAGES]
@@ -22,7 +22,7 @@ To get it working, and to be able to correctly use the template provided, add th
 (add-to-list 'org-latex-classes
              '("portrait_poster_a0"
                "\\documentclass[t]{beamer}
-           \\usepackage[orientation=portrait,size=a0,scale=1.4,debug]{beamerposter}
+           \\usepackage[orientation=portrait,size=a0,scale=1.2,debug]{beamerposter}
            \\usepackage[absolute,overlay]{textpos}
 [NO-DEFAULT-PACKAGES]
 [PACKAGES]

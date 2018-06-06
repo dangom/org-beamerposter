@@ -10,7 +10,7 @@ To get it working, and to be able to correctly use the template provided, add th
 (add-to-list 'org-latex-classes
              '("landscape_poster_a1"
                "\\documentclass[t]{beamer}
-           \\usepackage[orientation=landscape,size=a1,scale=1.4,debug]{beamerposter}
+           \\usepackage[orientation=landscape,size=a1,scale=1.2,debug]{beamerposter}
            \\usepackage[absolute,overlay]{textpos}
 [NO-DEFAULT-PACKAGES]
 [PACKAGES]
@@ -22,7 +22,7 @@ To get it working, and to be able to correctly use the template provided, add th
 (add-to-list 'org-latex-classes
              '("portrait_poster_a0"
                "\\documentclass[t]{beamer}
-           \\usepackage[orientation=portrait,size=a0,scale=1.4,debug]{beamerposter}
+           \\usepackage[orientation=portrait,size=a0,scale=1.25,debug]{beamerposter}
            \\usepackage[absolute,overlay]{textpos}
 [NO-DEFAULT-PACKAGES]
 [PACKAGES]
@@ -121,7 +121,7 @@ To quit, place the cursor on top of any heading and press =q=.
 #+latex_header:   \clearfield{url}
 #+latex_header: }
 #+latex_header: }
-#+latex_header: \setbeamerfont{frametitle}{size={\fontsize{65}{40}}}
+# #+latex_header: \setbeamerfont{frametitle}{size={\fontsize{65}{40}}}
 #+latex_header: \renewcommand*{\bibfont}{\small}
 # Ideally the beamerthemedonders would be properly installed in the system, but the workaround is fine for now.
 #+LATEX_HEADER: \usepackage{./beamerthemedonders}
