@@ -109,10 +109,13 @@
 % block
 % --------------------------------------------------------------------------------
 \setbeamertemplate{block begin}{
-  \vskip.75ex
+  \vskip.25ex
+  \IfStrEq{\insertblocktitle}{}{}{
+    \vskip.5ex
   \begin{beamercolorbox}[leftskip=1cm,colsep*=.75ex]{block title}%
     \usebeamerfont*{block title}\Large\insertblocktitle
   \end{beamercolorbox}%
+  }
   {\ifbeamercolorempty[bg]{block body}{}{\nointerlineskip\vskip-0.5pt}}%
   \usebeamerfont{block body}%
   \begin{beamercolorbox}[colsep*=.75ex,sep=.75ex,vmode]{block body}%
@@ -137,24 +140,24 @@
 \setbeamertemplate{headline}{
   \leavevmode
   \begin{columns}[t,onlytextwidth]
-    \includegraphics[width=3cm,height=14cm]{./Logos/VertDondersColorBar.jpg}
+    \includegraphics[width=3cm,height=13cm]{./Logos/VertDondersColorBar.jpg}
     \column{.7\textwidth}
-    \begin{beamercolorbox}[wd=\columnwidth, leftskip=2cm, ht=12.55cm]{headline}
-      \vskip2.0cm
+    \begin{beamercolorbox}[wd=\columnwidth, leftskip=2cm, ht=11.55cm]{headline}
+      \vskip1.0cm
       % \centering
       \vskip7.6ex
       \usebeamercolor{title in
         headline}{\color{fg}\setlength\lineskip{12pt}\textbf{\Huge{\inserttitle}}\\[1ex]}
       \vskip4.6ex
       \usebeamercolor{author in headline}{\color{fg}\large{\insertauthor}\\[1ex]}
-      \vskip2.4ex
+      \vskip1.7ex
     \end{beamercolorbox}
     \column{.3\textwidth}
     \begin{beamercolorbox}[wd=\columnwidth]{logo}
       % \centering
       % \vskip2.10cm
-      \raisebox{6.3cm}[0pt][0pt]{%
-        \makebox[\textwidth][c]{\includegraphics[width=0.8\linewidth]{./Logos/DONDERS_LOGO_RGB_large.png}}
+      \raisebox{5cm}[0pt][0pt]{%
+        \makebox[\textwidth][l]{\includegraphics[width=0.9\linewidth]{./Logos/DONDERS_LOGO_RGB_large.png}}
       }
 
       % \vskip2.10cm
